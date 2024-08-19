@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href= "css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class = "container">
+        <div class="first card">
+            <div class= "row"> 
+                <div class = "temperture col-6">
+                    <h1 id = "header-temp"><%= temp %>°C</h1>
+                </div> 
+                <div class = "detail col-6"> 
+                    <h3> Today's Forecast</h3>
+                    <p> <%= condition %> </p>
+                    <p> <%= temp %>°C </p> 
+                </div>
+            </div>
+        </div>
+        <div class = "second card">
+            <div class="row">
+                <div class = "img col-8 col-12-sm">
+                    <% if (condition.toLowerCase().includes("sunny")) {%>
+                        <p>☀️</p>
+                    <% } else if (condition.toLowerCase().includes("cloudy")) {%>
+                        <p>☁️</p>
+                    <% } else if (condition.toLowerCase().includes("rainy")) {%>
+                        <p>🌧️</p>
+                        <% } %>
+                </div>
+                <div class = "mid detail col-4 col-12-sm">
+                    <h3> Ho Chi Minh city</h3>
+                    <p> Today is <%= condition %> day, remember to 
+                        <ul>
+                        <% for (var i = 0; i < reminder.length; i++) {%>
+                            <li> <%= reminder[i] %> </li>
+                            <% } %>
+                        </ul>
+                    </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

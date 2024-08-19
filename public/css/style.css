@@ -1,0 +1,50 @@
+body {
+    background-image: url("/images/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.detail {
+    text-align: end;
+    padding-right: 60px;
+}
+
+#header-temp {
+    height: 100%;
+    justify-content: end;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.temperture {
+    padding-left: 60px;
+}
+
+
+.card {
+    border: 0px;
+    border-bottom: 1px solid #000; /* Change color as needed */
+    margin-bottom: 10px; /* Change as needed */
+    background-color: transparent;
+}
+
+.img {
+    font-size: 250px;
+    text-align: left;
+}
+
+.mid {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
